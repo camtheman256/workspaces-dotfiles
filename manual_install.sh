@@ -14,17 +14,17 @@
 # Just in case you still want the default behavior of symlinking the dotfiles to the root,
 # we've included a block of code below for your convenience that does just that.
 
-set -euo pipefail
-
-DOTFILES_PATH="$HOME/dotfiles"
-
-# Symlink dotfiles to the root within your workspace
-find $DOTFILES_PATH -type f -path "$DOTFILES_PATH/.*" |
-while read df; do
-  link=${df/$DOTFILES_PATH/$HOME}
-  mkdir -p "$(dirname "$link")"
-  ln -sf "$df" "$link"
-done
+# set -euo pipefail
+# 
+# DOTFILES_PATH="$HOME/dotfiles"
+# 
+# # Symlink dotfiles to the root within your workspace
+# find $DOTFILES_PATH -type f -path "$DOTFILES_PATH/.*" |
+# while read df; do
+#   link=${df/$DOTFILES_PATH/$HOME}
+#   mkdir -p "$(dirname "$link")"
+#   ln -sf "$df" "$link"
+# done
 
 sudo apt update
 sudo apt install -y ubuntu-desktop
