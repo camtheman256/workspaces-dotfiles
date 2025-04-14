@@ -25,3 +25,21 @@ while read df; do
   mkdir -p "$(dirname "$link")"
   ln -sf "$df" "$link"
 done
+
+sudo apt update
+sudo apt install -y ubuntu-desktop
+
+wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+sudo apt install -y ./chrome-remote-desktop_current_amd64.deb
+rm ./chrome-remote-desktop_current_amd64.deb
+
+pip3 install --user git+https://github.com/nvbn/thefuck.git
+
+curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
+~/.cargo/bin/cargo-binstall --strategies crate-meta-data jj-cli
+
+rm -rf ~/dd/dd-source/.git/
+jj -R ~/dd/dd-source/ git init
+jj -R ~/dd/dd-source/ git remote add origin git@github.com:DataDog/dd-source.git
+jj -R ~/dd/dd-source/ git fetch
+jj -R ~/dd/dd-source/ git b t main@origin

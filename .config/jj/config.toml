@@ -1,0 +1,14 @@
+[user]
+name = "Cameron Kleiman"
+email = "cameron.kleiman@datadoghq.com"
+
+[ui]
+editor = "vim"
+
+[signing]
+behavior = "own"
+backend = "ssh"
+key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMPs5Nuw+FWmPU8xKJQnxTeEITFfbPv8x9Ju59K0fDhN"
+
+[git]
+push-bookmark-prefix = "camk/push-"
