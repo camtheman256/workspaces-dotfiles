@@ -30,3 +30,9 @@
 # This is a url rewrite that helps [go and maybe rust] tooling that downloads libraries from our private repos
 [url "git@github.com:DataDog/"]
         insteadOf = https://github.com/DataDog/
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

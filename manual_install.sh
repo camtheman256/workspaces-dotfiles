@@ -26,20 +26,25 @@
 #   ln -sf "$df" "$link"
 # done
 
-sudo apt update
-sudo apt install -y ubuntu-desktop
+# Graphical install for x86 desktops
 
-wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
-sudo apt install -y ./chrome-remote-desktop_current_amd64.deb
-rm ./chrome-remote-desktop_current_amd64.deb
+# sudo apt update
+# sudo apt install -y xubuntu-desktop
+# 
+# wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+# sudo apt install -y ./chrome-remote-desktop_current_amd64.deb
+# rm ./chrome-remote-desktop_current_amd64.deb
 
+pip3 install --user setuptools
 pip3 install --user git+https://github.com/nvbn/thefuck.git
 
 curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
-~/.cargo/bin/cargo-binstall --strategies crate-meta-data jj-cli
+~/.cargo/bin/cargo-binstall -y --strategies crate-meta-data jj-cli
 
-rm -rf ~/dd/dd-source/.git/
-jj -R ~/dd/dd-source/ git init
-jj -R ~/dd/dd-source/ git remote add origin git@github.com:DataDog/dd-source.git
-jj -R ~/dd/dd-source/ git fetch
-jj -R ~/dd/dd-source/ git b t main@origin
+cd ~/dd/dd-source/
+rm -rf .git/
+jj git init
+jj config set --repo snapshot.max-new-file-size 20971520
+jj git remote add origin git@github.com:DataDog/dd-source.git
+jj git fetch
+# jj b t main@origin
