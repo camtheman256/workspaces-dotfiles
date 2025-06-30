@@ -8,7 +8,7 @@ editor = "vim"
 [signing]
 behavior = "own"
 backend = "ssh"
-key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMPs5Nuw+FWmPU8xKJQnxTeEITFfbPv8x9Ju59K0fDhN"
+key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMPs5Nuw+FWmPU8xKJQnxTeEITFfbPv8x9Ju59K0fDhN\n"
 
 [git]
 push-bookmark-prefix = "camk/push-"
