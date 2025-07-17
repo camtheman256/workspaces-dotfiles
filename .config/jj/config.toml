@@ -12,6 +12,3 @@ key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMPs5Nuw+FWmPU8xKJQnxTeEITFfbPv8x9Ju5
 
 [templates]
 git_push_bookmark = '"camk/push-" ++ change_id.short()'
-
-[aliases]
-sp = ['util', 'exec', '---', 'jj squash', '&&', 'jj git push']
