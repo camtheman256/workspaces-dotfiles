@@ -6,4 +6,5 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 fish_add_path -m ~/.local/bin
 thefuck --alias | source
+ddr completion fish | source
 COMPLETE=fish jj | source
