@@ -1,0 +1,6 @@
+{
+  "bazel.buildifierFixOnFormat": true,
+  "gopls": {},
+  "go.toolsManagement.go": "/usr/local/bin/go",
+  "bsv.bazel.executable": "/home/bits/.local/bin/bzl"
+}
