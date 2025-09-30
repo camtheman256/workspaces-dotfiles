@@ -6,6 +6,7 @@ email = "cameron.kleiman@datadoghq.com"
 
 [ui]
 editor = "vim"
+default-command = "status"
 
 [signing]
 behavior = "own"
@@ -18,4 +19,3 @@ git_push_bookmark = '"camk/push-" ++ change_id.short()'
 [aliases]
 gft = ["git", "fetch", "--tracked"]
 gfb = ["git", "fetch", "--branch"]
-
