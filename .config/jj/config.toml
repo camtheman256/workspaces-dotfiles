@@ -15,7 +15,23 @@ backend = "ssh"
 key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMPs5Nuw+FWmPU8xKJQnxTeEITFfbPv8x9Ju59K0fDhN\n"
 
 [templates]
-git_push_bookmark = '"camk/push-" ++ change_id.short()'
+git_push_bookmark = '"camk/" ++ description_slug(description)'
+
+[template-aliases]
+# Replace all non-word characters with -
+# Replace multiple --- with a single -
+# Remove a starting or ending -
+"description_slug(description)" = """
+  truncate_end(
+    244,
+    description
+      .first_line()
+      .lower()
+      .replace(regex:"[[:^word:]]", "-")
+      .replace(regex:"-+", "-")
+      .replace(regex:"^-|-$", "")
+  )
+"""
 
 [aliases]
 gft = ["git", "fetch", "--tracked"]

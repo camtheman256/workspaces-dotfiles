@@ -4,5 +4,11 @@
   "go.toolsManagement.go": "/usr/local/bin/go",
   "bsv.bazel.executable": "/home/bits/.local/bin/bzl",
   "bazel.executable": "/home/bits/.local/bin/bzl",
-  "bazel.buildifierExecutable": "/usr/local/bin/buildifier"
+  "bazel.buildifierExecutable": "/usr/local/bin/buildifier",
+  "go.toolsEnvVars": {
+    "GOMODCACHE": "/home/bits/go/pkg/mod"
+  },
+  "go.alternateTools": {
+    "gopls": "dd-gopls"
+  }
 }

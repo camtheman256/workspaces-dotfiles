@@ -30,13 +30,11 @@
 	editor = vim
 
 # This is a url rewrite that helps [go and maybe rust] tooling that downloads libraries from our private repos
-[url "git@github.com:DataDog/"]
-        insteadOf = https://github.com/DataDog/
 [credential "https://github.com"]
 	helper = 
-	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
+	helper = !GH_TOKEN=$(/home/bits/.local/bin/ddtool auth github token) /home/linuxbrew/.linuxbrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = 
-	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
-[url "git@github.com:DataDog"]
-	insteadOf = https://github.com/DataDog
+	helper = !GH_TOKEN=$(/home/bits/.local/bin/ddtool auth github token) /home/linuxbrew/.linuxbrew/bin/gh auth git-credential
+[url "https://github.com/DataDog"]
+	insteadOf = git@github.com:DataDog
