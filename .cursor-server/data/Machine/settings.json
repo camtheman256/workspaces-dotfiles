@@ -9,5 +9,10 @@
   },
   "go.alternateTools": {
     "gopls": "dd-gopls"
-  }
+  },
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "golang.go"
+  },
+  "jjk.enableAnnotations": false
 }

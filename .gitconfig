@@ -38,5 +38,5 @@
 	helper = !GH_TOKEN=$(/home/bits/.local/bin/ddtool auth github token) /home/linuxbrew/.linuxbrew/bin/gh auth git-credential
 # [url "https://github.com/DataDog"]
 #	insteadOf = git@github.com:DataDog
-[url "git@github.com:DataDog"]
+[url "git@github.com:Datadog"]
 	insteadOf = "https://github.com/DataDog"

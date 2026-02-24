@@ -36,4 +36,5 @@ git_push_bookmark = '"camk/" ++ description_slug(description)'
 [aliases]
 gft = ["git", "fetch", "--tracked"]
 gfb = ["git", "fetch", "--branch"]
+tug = ["b", "s", "-r @-"]
 
