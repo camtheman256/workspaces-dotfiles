@@ -1,4 +1,5 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR __fish_initialized:3800
+SETUVAR --export NODE_OPTIONS:\x2d\x2dmax\x2dold\x2dspace\x2dsize\x3d30000
+SETUVAR __fish_initialized:3400
 SETUVAR fish_user_paths:/home/bits/\x2elocal/bin\x1e/home/bits/go/bin\x1e/home/bits/\x2ecargo/bin
