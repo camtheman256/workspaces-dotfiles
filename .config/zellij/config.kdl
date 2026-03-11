@@ -272,13 +272,6 @@ plugins {
 // eg. "https://example.com/my-plugin.wasm"
 load_plugins {
 }
-web_client {
-    font "JetBrains Mono"
-    theme {
-        cursor 10 20 30
-        cursor_accent 255 255 255
-    }
-}
  
 // Use a simplified UI without special fonts (arrow glyphs)
 // Options:
@@ -291,8 +284,17 @@ web_client {
 // Default: default
 // 
 // theme "dracula"
+// theme "pencil-dark"
 theme "pencil-light-custom"
  
+web_client {
+    font "JetBrains Mono"
+    theme {
+        cursor 10 20 30
+        cursor_accent 255 255 255
+    }
+}
+
 // Choose the base input mode of zellij.
 // Default: normal
 // 
