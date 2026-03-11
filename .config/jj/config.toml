@@ -38,3 +38,6 @@ gft = ["git", "fetch", "--tracked"]
 gfb = ["git", "fetch", "--branch"]
 tug = ["b", "s", "-r @-"]
 
+[revsets]
+bookmark-advance-to="@-"
+
