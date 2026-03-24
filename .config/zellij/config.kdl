@@ -285,7 +285,7 @@ load_plugins {
 // 
 // theme "dracula"
 // theme "pencil-dark"
-theme "pencil-light-custom"
+theme "pencil-light"
  
 web_client {
     font "JetBrains Mono"
